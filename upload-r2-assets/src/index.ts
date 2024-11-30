@@ -15,7 +15,7 @@ export default {
 			const url = new URL(request.url);
 			const key = url.pathname.slice(1);
 			await env.MY_BUCKET.put(key, request.body);
-			return new Response('Object ${key} uploaded successfully!');
+			return new Response(`Object ${key} uploaded successfully!`);
 		}
 
 		const url = new URL(request.url);
